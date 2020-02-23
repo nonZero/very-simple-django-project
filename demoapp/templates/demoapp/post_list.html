@@ -1,0 +1,11 @@
+<ul>
+    {% for object in object_list %}
+        <li>
+            <b>
+                <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+            </b>
+            <br/>
+            {{ object.published_at }}
+        </li>
+    {% endfor %}
+</ul>

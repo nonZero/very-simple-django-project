@@ -1,0 +1,14 @@
+.idea
+cache/
+__pycache__/
+*.py[cod]
+dist/
+node_modules/
+htmlcov/
+.tox/
+.coverage
+local_settings.py
+db.sqlite3
+.ipynb_checkpoints
+.env
+venv/
