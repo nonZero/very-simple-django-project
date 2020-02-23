@@ -1,0 +1,40 @@
+{% load bootstrap4 static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <title>
+        {{ view.title }} -
+        Demo Django Project
+    </title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{% url "demoapp:list" %}">
+            Demo Django Project
+        </a>
+    </nav>
+
+    {% bootstrap_messages %}
+
+    <h1>
+        {{ view.title }}
+    </h1>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+{% bootstrap_javascript jquery='full' %}
+{% block scripts %}
+
+{% endblock %}
+</body>
+</html>

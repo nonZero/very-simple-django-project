@@ -8,3 +8,4 @@ verify_ssl = true
 [packages]
 django = "*"
 faker = "*"
+django-bootstrap4 = "*"

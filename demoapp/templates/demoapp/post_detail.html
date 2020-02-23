@@ -1,6 +1,9 @@
-<h1>
-    <a href="{{ object.get_absolute_url }}">{{ object }}</a>
-</h1>
-<p>{{ object.published_at }}</p>
-{{ object.content|linebreaks }}
+{% extends "base.html" %}
+{% block content %}
 
+    <p>{{ object.published_at }}</p>
+    {{ object.content|linebreaks }}
+    <hr>
+    <a href="{{ object.get_absolute_url }}">permalink</a>
+
+{% endblock %}
