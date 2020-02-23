@@ -16,8 +16,9 @@
 <body>
 <div class="container-fluid">
 
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="{% url "demoapp:list" %}">
+            <img src="{% static "images/baobab.jpg" %}" alt="BAOBAB" height="80"/>
             Demo Django Project
         </a>
     </nav>
@@ -32,9 +33,12 @@
     {% endblock %}
 
 </div>
+
+
 {% bootstrap_javascript jquery='full' %}
 {% block scripts %}
 
 {% endblock %}
+
 </body>
 </html>
