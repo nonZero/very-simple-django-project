@@ -15,6 +15,8 @@
 
     pipenv install
     pipenv run python manage.py migrate
+    pipenv run python manage.py create_some_posts 25
+    
     
 ## To run in development:
 
