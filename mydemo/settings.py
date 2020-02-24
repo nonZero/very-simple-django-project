@@ -2,7 +2,6 @@ import os
 
 import django_heroku
 
-
 IS_HEORKU = bool(os.environ.get("DYNO"))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -108,3 +107,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 django_heroku.settings(locals())
+
+LOGGING['loggers'][''] = {
+    'handlers': ['console'],
+    'level': 'INFO',
+}
+LOGGING['loggers']['django'] = {
+    'handlers': ['console'],
+    'level': 'INFO',
+}
